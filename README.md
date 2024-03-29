@@ -1,16 +1,49 @@
-# Shopping Hut
+# ShoppingHut 🛒🌟
 
-A new Flutter project.
+**ShoppingHut** is your go-to shopping app, built with Flutter and Dart. It seamlessly connects you to a wide range of products using the "Fake Store API." Whether you're a fashion enthusiast, tech lover, or home decor aficionado, ShoppingHut simplifies your shopping experience.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+1. **Cart Management**: Effortlessly add items to your cart.
+2. **Wishlist Functionality**: Curate your dream collection by wishlisting desired products.
+3. **Streamlined Networking**: Powered by Dio, ShoppingHut fetches data swiftly.
+4. **Splash Screen**: A captivating entry point that sets the tone for your shopping journey.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repository:
+   ```
+   git clone https://github.com/vkprogrammer-001/FluttyCalc.git
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Ensure Flutter is set up:
+   ```
+   flutter doctor
+   ```
+
+3. Fetch dependencies:
+   ```
+   flutter pub get
+   ```
+
+4. Run the app:
+   ```
+   flutter run
+   ```
+
+## Version Information
+
+- Flutter: 3.16.9
+- Dart: 3.2.6
+
+## Supported Platforms
+
+- Android (via Android Studio)
+- iOS (via Xcode)
+
+## Get Started
+
+1. Explore the product catalog.
+2. Add items to your cart.
+3. Create a wishlist of your favorite products.
+4. Enjoy a seamless shopping experience!
