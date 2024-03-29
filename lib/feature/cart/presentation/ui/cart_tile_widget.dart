@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_hut/feature/home/model/home_product_data_model.dart';
-import 'package:shopping_hut/feature/wishlist/bloc/wishlist_bloc.dart';
+import 'package:shopping_hut/feature/cart/presentation/bloc/cart_bloc.dart';
+import 'package:shopping_hut/feature/home/data/model/home_product_data_model.dart';
 
 
-class WishlistTileWidget extends StatelessWidget {
+class CartTileWidget extends StatelessWidget {
   final ProductDataModel productDataModel;
-  final WishlistBloc wishlistBloc;
-  const WishlistTileWidget({
-    super.key,
-    required this.productDataModel,
-    required this.wishlistBloc,
-  });
+  final CartBloc cartBloc;
+  const CartTileWidget(
+      {super.key, required this.productDataModel, required this.cartBloc});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class WishlistTileWidget extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(productDataModel.imageURL),
+                image: NetworkImage(productDataModel.image),
                 fit: BoxFit.cover),
           ),
         ),
@@ -35,7 +32,7 @@ class WishlistTileWidget extends StatelessWidget {
           height: 20,
         ),
         Text(
-          productDataModel.name,
+          productDataModel.title,
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         Text(productDataModel.description),
@@ -46,23 +43,12 @@ class WishlistTileWidget extends StatelessWidget {
               "\$${productDataModel.price}",
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            Row(children: [
-              IconButton(
-                  onPressed: () {
-                    wishlistBloc.add(WishlistRemovedFromWishlistEvent(
-                        productDataModel: productDataModel));
-                  },
-                  icon: const Icon(
-                    Icons.favorite,
-                    color: Colors.red,
-                  )),
-              IconButton(
-                  onPressed: () {
-                    wishlistBloc.add(WishlistProductCartEvent(
-                        clickedProduct: productDataModel));
-                  },
-                  icon: const Icon(Icons.shopping_bag)),
-            ])
+            IconButton(
+                onPressed: () {
+                  cartBloc.add(CartRemoveFromCartEvent(
+                      productDataModel: productDataModel));
+                },
+                icon: const Icon(Icons.delete))
           ],
         ),
       ]),

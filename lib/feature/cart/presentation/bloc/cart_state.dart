@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_hut/feature/home/model/home_product_data_model.dart';
+import 'package:shopping_hut/feature/home/data/model/home_product_data_model.dart';
 
 @immutable
 abstract class CartState {}

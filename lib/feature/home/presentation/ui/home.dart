@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shopping_hut/feature/cart/ui/cart.dart';
-import 'package:shopping_hut/feature/home/bloc/home_bloc.dart';
-import 'package:shopping_hut/feature/home/ui/product_tile_widgets.dart';
-import 'package:shopping_hut/feature/wishlist/ui/wishlist.dart';
+import 'package:shopping_hut/feature/cart/presentation/ui/cart.dart';
+import 'package:shopping_hut/feature/home/presentation/bloc/home_bloc.dart';
+import 'package:shopping_hut/feature/home/presentation/ui/product_tile_widgets.dart';
+import 'package:shopping_hut/feature/wishlist/presentation/ui/wishlist.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -23,6 +23,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    
     return BlocConsumer<HomeBloc, HomeState>(
       bloc: homeBloc,
       listenWhen: (previous, current) => current is HomeActionState,
@@ -30,10 +31,10 @@ class _HomeState extends State<Home> {
       listener: (context, state) {
         if (state is HomeNavigateToCartPage) {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) =>  const Cart()));
+              context, MaterialPageRoute(builder: (context) => const Cart()));
         } else if (state is HomeNavigateToWishlistPage) {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const Wishlist()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Wishlist()));
         } else if (state is ProductItemCartedActionState) {
           ScaffoldMessenger.of(context)
               .showSnackBar(const SnackBar(content: Text('Item Carted')));
@@ -50,8 +51,8 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.all(2.0),
-                  child: Image.asset('assets/images/hut.png')),
+                    margin: const EdgeInsets.all(2.0),
+                    child: Image.asset('assets/images/hut.png')),
                 const SizedBox(height: 4),
                 const CircularProgressIndicator(),
               ],

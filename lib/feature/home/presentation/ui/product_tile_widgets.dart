@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_hut/feature/home/bloc/home_bloc.dart';
-import 'package:shopping_hut/feature/home/model/home_product_data_model.dart';
+import 'package:shopping_hut/feature/home/data/model/home_product_data_model.dart';
+import 'package:shopping_hut/feature/home/presentation/bloc/home_bloc.dart';
 
 
 class ProductTileWidget extends StatelessWidget {
@@ -24,7 +24,7 @@ class ProductTileWidget extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(productDataModel.imageURL),
+                image: NetworkImage(productDataModel.image),
                 fit: BoxFit.cover),
           ),
         ),
@@ -32,7 +32,7 @@ class ProductTileWidget extends StatelessWidget {
           height: 20,
         ),
         Text(
-          productDataModel.name,
+          productDataModel.title,
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         Text(productDataModel.description),

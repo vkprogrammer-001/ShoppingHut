@@ -1,5 +1,5 @@
-import "package:flutter/material.dart";
-import "package:shopping_hut/feature/home/ui/home.dart";
+import 'package:flutter/material.dart';
+import 'package:shopping_hut/feature/home/presentation/ui/home.dart';
 
 
 void main(){

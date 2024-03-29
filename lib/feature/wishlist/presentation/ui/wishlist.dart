@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shopping_hut/feature/wishlist/bloc/wishlist_bloc.dart';
-import 'package:shopping_hut/feature/wishlist/ui/wishlist_tile_widget.dart';
+import 'package:shopping_hut/feature/wishlist/presentation/bloc/wishlist_bloc.dart';
+import 'package:shopping_hut/feature/wishlist/presentation/ui/wishlist_tile_widget.dart';
 
 class Wishlist extends StatefulWidget {
   const Wishlist({super.key});

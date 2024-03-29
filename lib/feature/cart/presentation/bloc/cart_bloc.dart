@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shopping_hut/Data/cart_items.dart';
-import 'package:shopping_hut/feature/cart/bloc/cart_state.dart';
-import 'package:shopping_hut/feature/home/model/home_product_data_model.dart';
+import 'package:shopping_hut/feature/cart/data/datasources/cart_items.dart';
+import 'package:shopping_hut/feature/cart/presentation/bloc/cart_state.dart';
+import 'package:shopping_hut/feature/home/data/model/home_product_data_model.dart';
 
 part 'cart_event.dart';
 
