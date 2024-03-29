@@ -13,7 +13,7 @@
 
 1. Clone the repository:
    ```
-   git clone https://github.com/vkprogrammer-001/FluttyCalc.git
+   git clone https://github.com/vkprogrammer-001/ShoppingHut.git
    ```
 
 2. Ensure Flutter is set up:
