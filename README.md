@@ -47,3 +47,11 @@
 2. Add items to your cart.
 3. Create a wishlist of your favorite products.
 4. Enjoy a seamless shopping experience!
+
+## Contributing
+
+Interested in contributing to the ShoppingHut Project? Here's how:
+
+1. Check the existing issues or create new ones.
+2. Fork the repository and create a branch for the issue you're working on.
+3. Submit a pull request with your changes.
