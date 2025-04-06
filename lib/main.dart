@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_hut/feature/home/presentation/ui/home.dart';
+import 'package:provider/provider.dart';
+import 'package:shopping_hut/core/navigation/main_navigation.dart';
+import 'package:shopping_hut/core/theme/app_theme.dart';
 
-
-void main(){
-  runApp(const MyApp());
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,9 +17,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Home(),
+      title: 'Shopping Hut',
+      themeMode: themeProvider.themeMode,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      home: const MainNavigation(),
     );
   }
 }

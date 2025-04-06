@@ -2,10 +2,9 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:shopping_hut/feature/wishlist/data/datasources/wishlist_items.dart';
 import 'package:shopping_hut/feature/cart/data/datasources/cart_items.dart';
 import 'package:shopping_hut/feature/home/data/model/home_product_data_model.dart';
-
+import 'package:shopping_hut/feature/wishlist/data/datasources/wishlist_items.dart';
 
 part 'wishlist_event.dart';
 part 'wishlist_state.dart';
@@ -29,7 +28,7 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
 
   FutureOr<void> wishlistProductCartEvent(WishlistProductCartEvent event, Emitter<WishlistState> emit) {
     print("Wishlist Product Cart Clicked");
-    cartItems.add(event.clickedProduct);
+    addToCart(event.clickedProduct);
     emit(WishlistProductItemCartedActionState());
   }
 }
