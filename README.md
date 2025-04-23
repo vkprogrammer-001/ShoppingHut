@@ -1,6 +1,13 @@
 # ShoppingHut 🛒🌟
 
 **ShoppingHut** is your go-to shopping app, built with Flutter and Dart. It seamlessly connects you to a wide range of products using the "Fake Store API." Whether you're a fashion enthusiast, tech lover, or home decor aficionado, ShoppingHut simplifies your shopping experience.
+</br>
+
+<img src="https://github.com/user-attachments/assets/f56a9a2b-1c82-4bff-814e-d91932beda74" alt="splash screen" width="200" height="400">
+<img src="https://github.com/user-attachments/assets/6db81ca3-e169-4cc3-ac43-a77fdc9bd58e" alt="splash screen" width="200" height="400">
+<img src="https://github.com/user-attachments/assets/97be6e13-7c7a-4efe-96ec-4ac8c7c1a05a" alt="splash screen" width="200" height="400">
+<img src="https://github.com/user-attachments/assets/f66dbb53-6c4a-4ff0-bdb2-a6f53a5e9f02" alt="splash screen" width="200" height="400">
+
 
 ## Features
 
